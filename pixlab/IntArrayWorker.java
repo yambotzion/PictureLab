@@ -98,5 +98,19 @@ public class IntArrayWorker
       }
     }
   }
- 
+  
+  /**
+   *  get count of how many times it has passed an int
+   */
+  public int getCount(int integerValue){
+      int count = 0;
+      for(int[] row : matrix){
+          for(int col: row){
+            if(col == integerValue){
+                count++;
+            }
+          }
+      }
+      return count;
+  }
 }
