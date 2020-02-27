@@ -113,4 +113,30 @@ public class IntArrayWorker
       }
       return count;
   }
+  /**
+   * get the largest value out of the array
+   */
+  public int getLargest(){
+      int largest = matrix[0][0];
+      for(int[] row : matrix){
+          for(int col: row){
+            if(col > largest){
+                largest = col;
+            }
+          }
+      }
+      return largest;
+  }
+  /*
+   * Get the column totals  
+   *
+   */
+  public int getColTotal(int column){
+      int columnSum = 0;
+      for(int row = 0; row>matrix.length; row++){
+          columnSum += matrix[row][column];
+      }
+      return columnSum;
+  }
+  
 }
